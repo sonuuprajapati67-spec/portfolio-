@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonu | Video Editor Portfolio</title>
+    <style>
+        /* --- CSS STYLES --- */
+        
+        /* 1. Reset and Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #0f0f0f; /* Dark Background */
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* 2. Container (Controls width) */
+        .container {
+            width: 90%;
+            max-width: 700px; /* Keeps it minimal and focused like the reference */
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /* 3. Profile Section */
+        .profile-section {
+            margin-bottom: 50px;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%; /* Makes image circular */
+            border: 2px solid #333;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .bio {
+            color: #aaaaaa; /* Slightly grey text for hierarchy */
+            font-size: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* 4. Work Section */
+        .work-section {
+            margin-bottom: 60px;
+            width: 100%;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .grid {
+            display: grid;
+            /* Responsive Grid Logic: */
+            /* Mobile: 2 columns, Desktop: 3 columns */
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 15px;
+        }
+
+        @media (min-width: 600px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .work-item {
+            display: block;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px; /* Rounded corners */
+            transition: transform 0.2s ease;
+            aspect-ratio: 9 / 16; /* Vertical Aspect Ratio for Reels/Shorts */
+            background-color: #1a1a1a;
+        }
+
+        .work-item:hover {
+            transform: scale(1.02); /* Slight zoom on hover */
+            border: 1px solid #444;
+        }
+
+        .work-thumb {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .work-item:hover .work-thumb {
+            opacity: 1;
+        }
+
+        /* 5. Contact Section */
+        .contact-section {
+            margin-bottom: 40px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: background-color 0.2s;
+        }
+
+        .contact-btn:hover {
+            background-color: #cccccc;
+        }
+
+        .footer {
+            margin-top: auto;
+            color: #444;
+            font-size: 0.8rem;
+            padding-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="profile-section">
+            <img src="https://via.placeholder.com/150" alt="Sonu Profile Picture" class="profile-img">
+            
+            <h1>Hey 👋, I’m Sonu</h1>
+            <p class="bio">
+                I’m a short-form video editor specializing in Instagram Reels and YouTube Shorts. 
+                I focus on clean cuts, smooth transitions, and high-retention subtitles.
+            </p>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid #222; margin-bottom: 40px;">
+
+        <div class="work-section">
+            <h2 class="section-title">My Work</h2>
+            
+            <div class="grid">
+                <a href="LINK_TO_VIDEO_1" target="_blank" class="work-item">
+                    <img src="https://via.placeholder.com/300x533/222/555?text=Reel+1" alt="Work 1" class="work-thumb">
+                </a>
+
+                <a href="LINK_TO_VIDEO_2" target="_blank" class="work-item">
+                    <img src="https://via.placeholder.com/300x533/222/555?text=Reel+2" alt="Work 2" class="work-thumb">
+                </a>
+
+                <a href="LINK_TO_VIDEO_3" target="_blank" class="work-item">
+                    <img src="https://via.placeholder.com/300x533/222/555?text=Reel+3" alt="Work 3" class="work-thumb">
+                </a>
+
+                <a href="LINK_TO_VIDEO_4" target="_blank" class="work-item">
+                    <img src="https://via.placeholder.com/300x533/222/555?text=Reel+4" alt="Work 4" class="work-thumb">
+                </a>
+
+                <a href="LINK_TO_VIDEO_5" target="_blank" class="work-item">
+                    <img src="https://via.placeholder.com/300x533/222/555?text=Reel+5" alt="Work 5" class="work-thumb">
+                </a>
+
+                <a href="LINK_TO_VIDEO_6" target="_blank" class="work-item">
+                    <img src="https://via.placeholder.com/300x533/222/555?text=Reel+6" alt="Work 6" class="work-thumb">
+                </a>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <p style="margin-bottom: 15px; color: #888;">Ready to work together?</p>
+            <a href="https://instagram.com/YOUR_USERNAME" target="_blank" class="contact-btn">
+                Contact me on Instagram ↗
+            </a>
+        </div>
+
+        <footer class="footer">
+            &copy; 2024 Sonu. All rights reserved.
+        </footer>
+
+    </div>
+
+</body>
+</html>
